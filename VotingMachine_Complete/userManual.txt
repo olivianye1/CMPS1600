@@ -1,0 +1,59 @@
+USER MANUAL 
+Project: Project 0 - Voting Machine
+@author Olivia Nye
+@class CMPS 1600 
+@date 02/27/2019
+
+As it stands this project is fully functional. This project adheres to all guidelines provided in the Project 0 Voting
+Machine instructions document and includes the implementation of a fully functional extra credit element. 
+
+Input file must be formatted to include text and white space that follows this example:
+
+James Beard Award
+3
+Nina Compton;Compere Lapin:Caribbean
+Alon Shaya;Saba:Middle Eastern
+Emeril Lagasse;Emeril’s:Creole
+
+
+
+The following files are included in the submitted Zip file, in addition to this userManualtxt document:
+
+
+
+- Ballot.java class provides methods and attributes that allow for the construction of new Ballot objects.
+
+- Candidate.java class is a public class that provides methods for the construction of objects that each represent one candidate on a ballot, which consist of a name, a party affiliation, and a cuisine type. 
+ This class also keeps track of the number of votes placed for each candidate object constructed.
+
+- PerfectCandidate.java is the main class for this project. This class also provides a description of the whole project. This file was not modified by Olivia other than the commented project description at the top of the java document.
+
+- ResultWriter.java class contains one method that formats the results of the election conducted using the voting machine GUI and prints these formatted results to a .txt file.
+
+- BallotReader.java class contains one static method that reads the input from a text file representing the ballot information in a specified text format, extracts the information of interest, and uses that information to construct a new Ballot object.
+
+- BallotTester.java class is an extension of TestCase class from junit framework that tests the constructor and the methods from the Ballot class.
+
+- CandidateTester.java is a class that is extension of TestCase class from junit framework that tests the constructor and the methods from the Candidate class.
+
+- FileSelector.java class was not at all modified by Olivia. 
+
+- BallotDialog.java class provides methods that dictate the text displayed in the GUI. 
+
+- UML_VotingMachine_final.UCLS provides a UML diagram that maps out all classes, attributes, and methods in the VotingMachine project
+
+- UML_VotingMachine_final.PNG provides a PNG file containing a UML diagram that maps out all classes, attributes, and methods in the VotingMachine project. 
+	Identical to UML_VotingMachine_final.UCLS other than file type. 
+
+- votingMachine_sampleInput.txt provides an example of a properly formatted input file
+
+- README_ExtraCredit.txt provides an extensive explanation of the extra credit feature implemented in this project.
+
+- ResultWriter_TestPlan.txt provides an extensive description of how the ResultWriter class should be properly tested.
+
+- BallotReader_TestPlan.txt provides an extensive description of how the BallotReader class should be properly tested.
+
+- All .html documents are javadoc files for the classes in this project
+
+- Executable Jar 
+

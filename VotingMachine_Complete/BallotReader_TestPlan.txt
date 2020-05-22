@@ -1,0 +1,55 @@
+/**
+ * Outlines the Test Plan for the BallotReader Class
+ * @author Olivia Nye
+ * @class CMPS 1600 
+ * @date 02/27/2019
+ * Project 0 - Voting Machine
+ */
+
+Test Case 1 - Inexistent Files:
+
+	The proper functioning of the IOException throw would be indicated by the result of entering  a fileName that 
+	does not exist when prompted for an input file path in the VotingMachine GUI. If the program outputs the default
+	 IO exception error statement and re-prompts the user for an input file path, then this test passes.
+
+Test Case 2 - Improper File:
+	The proper functioning of the IOException throw would be indicated by the result of entering  a fileName that 
+	is not compatable when prompted for an input file path in the VotingMachine GUI. For example, a locked file, 
+	an immutable PDF file, a JPEG file, and a PNG file would all make the program output the default IO 
+	Exception error statement and re-prompt the user for an output file path, if this test were to pass.
+
+Test Case 3 - Improper Use of Semicolon:
+	If the candidate information given in the input file strings read happen to include a semi-colon other than the 
+	one semicolon that separates the candidate name from the candidate affiliation, the program will be unable to
+	function properly. So, one should test that there is only 1 semicolon in each current value of candidateInfo 
+	by creating and using an int semicolon counter attribute and iterating through the characters in the string.
+	Then, if the semicolon counter is not equal to 1, fail(). junit testing could potentially be used to 
+	run this test. 
+
+Test Case 4 - officeName:
+	1.(Normal) Select an input file with a known normal, string office name that is properly formatted. Use public 
+	contentEquals method to ensure that the known office name string is the same as 
+	the value of ballot.getOfficeName. 
+
+
+	2.(Boundary) Select an input file with a known string office name that is only one character long but is properly
+	 formatted. Use public contentEquals method to ensure that the known office name string is the same as 
+	the value of ballot.getOfficeName. 
+
+Test Case 5 - number of candidates 
+	1. (Boundary) Select a properly formatted input file that you know has 1 candidate, and indicates that accurately 
+	on the second line of the input file text. Call "return ballot.getCandidates.Size()" and ensure that 1 is returned.
+	
+	2. (Normal) Select a properly formatted input file that you know has 5 candidate, and indicates that accurately 
+	on the second line of the input file text. Call "return ballot.getCandidates.Size()" and ensure that 5 is returned.
+
+	
+Test Case 6 - Candidate information 
+	Read a text file manually (programmer reads it) and use Candidate class and Ballot class set methods to 
+	create the candidates and add them to a different instance of ballot that you construct, the candidates should be
+	the same as what should be automatically created from the BallotReader function. Check that the get methods from 
+	Candidate and Ballot classes return the same values for the programmer-made ballot as the BallotReader-made ballot.
+	Specifically, compare Candidate.getName, Candidate.getAffiliation for every candidate that should be on each 
+	ballot and compare ballot.getCandidates for the two ballots. This test verifies that the program accurately reads 
+	the text file. 
+

@@ -1,0 +1,57 @@
+/**
+ * Outlines the Test Plan for the ResultWriter Class
+ * @author Olivia Nye
+ * @class CMPS 1600 
+ * @date 02/27/2019
+ * Project 0 - Voting Machine
+
+Test Case 1 - Inexistent Files:
+
+	The proper functioning of the IOException throw would be indicated by the result of entering  a fileName that 
+	does not exist when prompted for an output file path in the VotingMachine GUI. If the program outputs the default IO 
+	exception error statement and re-prompts the user for an output file path, then this test passes.
+
+Test Case 2 - Improper File:
+	The proper functioning of the IOException throw would be indicated by the result of entering  a fileName that 
+	is not compatable when prompted for an output file path in the VotingMachine GUI. For example, a locked file, 
+	an immutable PDF file, a JPEG file, and a PNG file would all make the program output the default IO 
+	Exception error statement and re-prompt the user for an output file path, if this test were to pass.
+
+Test Case 3 - normal test of output success, accuracy and formatting of ResultWriter method:
+	If writeResults is properly functioning, then an optimal test call would be to call would have a normal 
+	ballot created from well-tested and properly functioning ballot that has been voted upon with a normal, 
+	properly functioning PerfectCandidate file as the argument to the ballot parameter, and a normal, existing 
+	.txt file as the argument to the filename parameter. To test this, create hard-coded Strings that hold
+	the properly formatted text for each line of the intended, accurate output. Use a scanner to read in,
+	line by line, the text in the file that writeResults created. Assert equals each line from the file to 
+	its respective hard-coded string. 
+
+
+Test Case 4 - test winner calculation 
+	1. Use GUI to vote 1 time for first candidate, 2 times for second, and 3 times for third. Check output
+	 to ensure that third candidate is declared as the winner in the last line of the output file. 
+	
+	2. Launch GUI but don't vote for any of the candidates. Check output to ensure that the last line of the
+	 output file states that there is "NO WINNER"
+
+	3. Use GUI to vote 1 time for first candidate, 1 time for second, none for third. Check output to ensure
+	 that the last line of the output file states that there is "NO WINNER"
+
+	4.  Use GUI to vote 2 times for first candidate, 1 time for second, and 1 time for third. Check output
+	 to ensure that first candidate is declared as the winner in the last line of the output file. 
+	
+	5.  Use GUI to vote 1 time for every candidate. Check output to ensure that the last line of the output 
+	file states that there is "NO WINNER"
+	
+	6. Use an input text file that only includes one candidate to be on the ballot. Use GUI and vote any
+	number of times (run multiple times with 0, 1, and 2 votes) for that one candidate option. Check 
+	output to ensure that the last line of the output file states that the one candidate is the winner,
+	 no matter how many votes they get. 
+
+
+
+	
+
+
+		
+	
